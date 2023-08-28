@@ -1,0 +1,3 @@
+- make views for DB viewer x
+- make object mapper x
+- make crud generator x

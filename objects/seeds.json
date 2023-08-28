@@ -1,0 +1,18 @@
+[
+{
+  "tableName":"users",
+  "fields":{
+    "name":"'Seed 1'",
+    "email":"'email'",
+    "password":"'password_test'"
+  }
+},
+{
+  "tableName":"users",
+  "fields":{
+    "name":"'Seed 2'",
+    "email":"'email'",
+    "password":"'password_test'"
+  }
+}
+]
