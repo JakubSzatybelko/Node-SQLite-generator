@@ -2,7 +2,7 @@ const { json } = require('express')
 const express = require('express')
 const app = express()
 const sqlite3 = require('sqlite3').verbose();
-const port = 3000
+const port = 3001
 var cors = require('cors')
 
 app.use(cors())

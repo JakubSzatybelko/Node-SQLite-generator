@@ -16,7 +16,7 @@ async function addUser() {
     email: getInputValue('email'),
     password: getInputValue('userPassword'),
   };
-  const req = await fetch('http://localhost:3000/users', {
+  const req = await fetch('http://localhost:3001/users', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(body),
@@ -28,7 +28,7 @@ async function addUser() {
 
 async function deleteUser() {
   const userId = getInputValue('userId');
-  const req = await fetch('http://localhost:3000/users/' + userId, {
+  const req = await fetch('http://localhost:3001/users/' + userId, {
     method: 'DELETE',
   });
   // const res = await req.json();
@@ -37,7 +37,7 @@ async function deleteUser() {
 }
 
 (function getAllTables() {
-  fetch('http://localhost:3000/tables')
+  fetch('http://localhost:3001/tables')
     .then((res) => res.json())
     .then((data) => {
       const navbar = document.getElementById('navbar');
@@ -47,7 +47,7 @@ async function deleteUser() {
     });
 })()
 function selectTable(tableName) {
-  fetch('http://localhost:3000/columns/' + tableName)
+  fetch('http://localhost:3001/columns/' + tableName)
     .then((res) => res.json())
     .then((data) => {
       const table = document.getElementById('tableView');
@@ -61,7 +61,7 @@ function selectTable(tableName) {
     });
 }
 function getTableData(tableName) {
-  fetch('http://localhost:3000/rows/' + tableName)
+  fetch('http://localhost:3001/rows/' + tableName)
     .then((res) => res.json())
     .then((data) => {
       const table = document.getElementById('tableView');
