@@ -31,12 +31,11 @@ app.get('/', (req, res) => {
   res.type('.html');
   res.sendFile(path.join(__dirname + '/DB-viewer/website/index.html'));
 })
-app.get('src/index.js', (req, res) => {
+app.get('/src/index.js', (req, res) => {
   res.type('.js');
-  console.log("sime")
   res.sendFile(path.join(__dirname + '/DB-viewer/website/src/index.js'));
 })
-app.get('src/style.css', (req, res) => {
+app.get('/src/style.css', (req, res) => {
   res.type('.css');
   res.sendFile(path.join(__dirname + '/DB-viewer/website/src/style.css'));
 })
